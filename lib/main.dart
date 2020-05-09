@@ -12,21 +12,29 @@ void main() => runApp(
         )
       ),
     );
-class MagicBall extends StatelessWidget {
+
+class MagicBall extends StatefulWidget {
+  @override
+  _MagicBallState createState() => _MagicBallState();
+}
+
+class _MagicBallState extends State<MagicBall> {
+  int ballAnswer = 1;
 
   @override
   Widget build(BuildContext context) {
-    var BallAnswer = 1;
     return  Center(
       child: Row(
         children: <Widget>[
           Expanded(
             child: FlatButton(
               onPressed: (){
-                print('8 Ball got pressed');
-
+                setState(() {
+                  ballAnswer = 3;
+                  print('ballAnswer = $ballAnswer');
+                });
               },
-                child: Image.asset('images.ball$BallAnswer.png'),
+              child: Image.asset('images.ball$ballAnswer.png'),
             ),
           ),
         ],
@@ -34,4 +42,5 @@ class MagicBall extends StatelessWidget {
     );
   }
 }
+
 
