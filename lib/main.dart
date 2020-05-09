@@ -6,7 +6,7 @@ void main() => runApp(
         home: Scaffold(
           backgroundColor: Colors.black12,
           appBar: AppBar(
-            title: Text('Magic 8 Ball'),
+            title: Text('Ask Me Anything'),
             backgroundColor: Colors.black12,
           ),
            body: MagicBall()
