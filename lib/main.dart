@@ -19,9 +19,12 @@ class MagicBall extends StatelessWidget {
       child: Row(
         children: <Widget>[
           Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(18.0),
-              child: Image.asset('images.ball1.png'),
+            child: FlatButton(
+              onPressed: (){
+                print('8 Ball got pressed');
+
+              },
+                child: Image.asset('images.ball1.png'),
             ),
           ),
         ],
