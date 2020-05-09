@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 
 void main() => runApp(
@@ -30,8 +31,7 @@ class _MagicBallState extends State<MagicBall> {
             child: FlatButton(
               onPressed: (){
                 setState(() {
-                  ballAnswer = 3;
-                  print('ballAnswer = $ballAnswer');
+                  ballAnswer = Random().nextInt(5) + 1;
                 });
               },
               child: Image.asset('images.ball$ballAnswer.png'),
