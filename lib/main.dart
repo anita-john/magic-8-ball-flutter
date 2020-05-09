@@ -13,8 +13,10 @@ void main() => runApp(
       ),
     );
 class MagicBall extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
+    var BallAnswer = 1;
     return  Center(
       child: Row(
         children: <Widget>[
@@ -24,7 +26,7 @@ class MagicBall extends StatelessWidget {
                 print('8 Ball got pressed');
 
               },
-                child: Image.asset('images.ball1.png'),
+                child: Image.asset('images.ball$BallAnswer.png'),
             ),
           ),
         ],
