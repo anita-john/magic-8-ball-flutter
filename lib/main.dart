@@ -15,12 +15,17 @@ void main() => runApp(
 class MagicBall extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Expanded(
-          child: Image.asset('images.ball1.png'),
-        ),
-      ],
+    return  Center(
+      child: Row(
+        children: <Widget>[
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(18.0),
+              child: Image.asset('images.ball1.png'),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
